@@ -1,3 +1,5 @@
+import RestTimer from "./RestTimer.jsx";
+
 export default function DetailModal({ exercise, onClose }) {
   const videoSearchUrl = exercise.videoQuery
     ? `https://www.youtube.com/results?search_query=${encodeURIComponent(exercise.videoQuery)}`
@@ -16,7 +18,6 @@ export default function DetailModal({ exercise, onClose }) {
         <div className="modal-body">
           <p className="modal-meta">
             {exercise.detalle} · {exercise.series}
-            {exercise.descanso ? ` · Descanso ${exercise.descanso}` : ""}
           </p>
 
           {exercise.indicaciones?.length > 0 && (
@@ -26,6 +27,8 @@ export default function DetailModal({ exercise, onClose }) {
               ))}
             </ul>
           )}
+
+          {exercise.descanso && <RestTimer descanso={exercise.descanso} />}
 
           {videoSearchUrl && (
             <a

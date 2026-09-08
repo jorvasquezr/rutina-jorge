@@ -2,11 +2,14 @@
 
 Web estática (React + Vite) para seguir mi rutina de gimnasio desde el celular:
 
-- Elijo el día de entrenamiento (la app sugiere el día según el día de la semana).
+- Al abrir la app elijo el día de entrenamiento en una pantalla propia (con
+  el día sugerido según el día de la semana y el progreso de hoy marcado);
+  un botón "‹" regresa a esa pantalla desde el checklist.
 - Marco cada ejercicio como hecho con un check; el progreso se guarda en el
   celular (`localStorage`) y se reinicia solo al día siguiente.
-- Toco un ejercicio para ver el detalle: series/repeticiones, descanso,
-  indicaciones de técnica y un enlace directo a ejemplos en YouTube.
+- Toco un ejercicio para ver el detalle: series/repeticiones, indicaciones
+  de técnica, un cronómetro de descanso (con sonido y vibración al
+  terminar) y un enlace directo a ejemplos en YouTube.
 - Un botón de información (ℹ️) muestra las guías generales: cómo escoger el
   peso, tabla de descansos, progresión de cardio, etc.
 
